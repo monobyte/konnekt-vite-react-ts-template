@@ -10,7 +10,7 @@ function App() {
           </div>
           <div className="text-center">
             <h1 className="text-4xl font-black text-white tracking-tighter uppercase italic">
-              Konnekt: FORGE
+              Konnekt: <span className="text-red-600">FORGE</span>
             </h1>
             <p className="text-zinc-400 mt-2 text-lg font-medium">
               Next-Gen React Development Environment
