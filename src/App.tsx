@@ -2,22 +2,22 @@ import { Zap } from 'lucide-react';
 
 function App() {
   return (
-    <div className="w-screen h-screen p-[10px] box-border bg-slate-50">
-      <div className="w-full h-full flex flex-col items-center justify-center bg-white rounded-xl shadow-sm border border-slate-200">
+    <div className="w-screen h-screen p-[10px] box-border bg-zinc-950 text-zinc-100">
+      <div className="w-full h-full flex flex-col items-center justify-center bg-zinc-900 rounded-xl shadow-2xl border border-zinc-800">
         <div className="flex flex-col items-center gap-4">
-          <div className="p-4 bg-yellow-100 rounded-full">
-            <Zap className="w-12 h-12 text-yellow-600 fill-yellow-600" />
+          <div className="p-4 bg-orange-500/10 rounded-full border border-orange-500/20">
+            <Zap className="w-12 h-12 text-orange-500 fill-orange-500" />
           </div>
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-slate-900 tracking-tight">
-              Vite + React
+            <h1 className="text-4xl font-black text-white tracking-tighter uppercase italic">
+              Konnekt: FORGE
             </h1>
-            <p className="text-slate-500 mt-2 text-lg">
-              TypeScript & Tailwind CSS Template
+            <p className="text-zinc-400 mt-2 text-lg font-medium">
+              Next-Gen React Development Environment
             </p>
           </div>
           <div className="flex gap-3 mt-6">
-            <code className="px-3 py-1 bg-slate-100 rounded text-slate-600 font-mono text-sm border border-slate-200">
+            <code className="px-3 py-1 bg-zinc-800 rounded text-orange-400 font-mono text-sm border border-zinc-700">
               src/App.tsx
             </code>
           </div>
