@@ -2,17 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: dark;
-}
-
-body {
-  margin: 0;
-  padding: 10px;
-  min-height: 100vh;
-  box-sizing: border-box;
-}
-
-#root {
-  height: calc(100vh - 20px);
+@layer base {
+  body {
+    @apply antialiased text-slate-900 bg-slate-50;
+  }
 }
