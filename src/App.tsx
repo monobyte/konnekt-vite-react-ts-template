@@ -1,105 +1,80 @@
-import { useState } from 'react'
-import { Rocket, Github, Zap, Shield } from 'lucide-react'
+import React from 'react';
+import { ArrowRight, Github, Rocket, Shield, Zap } from 'lucide-react';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App: React.FC = () => {
   return (
-    <div className="w-full h-full flex flex-col gap-4">
+    <div className="w-full h-full bg-[#0a0a0a] text-white rounded-lg overflow-hidden flex flex-col font-sans">
       {/* Header */}
-      <header className="bg-gray-900 border border-gray-800 rounded-xl p-6 shadow-sm flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="bg-teal-600 p-2 rounded-lg">
-            <Rocket className="w-6 h-6 text-white" />
+      <nav className="flex items-center justify-between p-6 border-b border-white/10">
+        <div className="flex items-center gap-2 font-bold text-xl">
+          <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+            <Rocket size={18} />
           </div>
-          <h1 className="text-xl font-bold text-white">Konnekt: FORGE</h1>
+          <span>Konnekt: <span className="text-red-500">FORGE</span></span>
         </div>
-        <a 
-          href="https://github.com" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="p-2 hover:bg-gray-800 rounded-full transition-colors"
-        >
-          <Github className="w-6 h-6 text-gray-400" />
-        </a>
-      </header>
+        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
+          <a href="#" className="hover:text-white transition-colors">Features</a>
+          <a href="#" className="hover:text-white transition-colors">Solutions</a>
+          <a href="#" className="hover:text-white transition-colors">Pricing</a>
+          <a href="#" className="hover:text-white transition-colors">About</a>
+        </div>
+        <button className="px-4 py-2 bg-white text-black text-sm font-semibold rounded-full hover:bg-gray-200 transition-colors">
+          Get Started
+        </button>
+      </nav>
 
-      {/* Main Content */}
-      <main className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4">
-        {/* Left Column - Hero */}
-        <section className="bg-gray-900 border border-gray-800 rounded-xl p-8 shadow-sm flex flex-col justify-center items-start">
-          <h2 className="text-4xl font-extrabold text-white mb-4 leading-tight">
-            Build your next idea <span className="text-teal-500">faster</span>.
-          </h2>
-          <p className="text-lg text-gray-400 mb-8 max-w-md">
-            A minimalist starting point with Vite, React, TypeScript, and Tailwind CSS. Pre-configured for speed and type safety.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <button 
-              onClick={() => setCount((count) => count + 1)}
-              className="px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg transition-all shadow-md active:scale-95 flex items-center justify-center gap-2"
-            >
-              <Zap className="w-4 h-4 fill-current" />
-              Counter: {count}
-            </button>
-            <button className="px-6 py-3 bg-gray-800 border border-gray-700 hover:border-gray-600 text-gray-200 font-semibold rounded-lg transition-all shadow-sm flex items-center justify-center gap-2">
-              <Shield className="w-4 h-4" />
-              Docs
-            </button>
-          </div>
-        </section>
+      {/* Hero Content */}
+      <main className="flex-1 flex flex-col items-center justify-center px-6 text-center">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-medium mb-8">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+          </span>
+          v2.0 is now live
+        </div>
+        
+        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
+          Build faster than <br /> ever before.
+        </h1>
+        
+        <p className="max-w-2xl text-lg text-gray-400 mb-10">
+          The ultimate foundation for your next project. High performance, 
+          secure by design, and crafted for developers who care about speed.
+        </p>
 
-        {/* Right Column - Tech Stack */}
-        <section className="bg-gray-900 border border-gray-800 rounded-xl p-8 shadow-sm flex flex-col text-white">
-          <h3 className="text-xl font-bold mb-6 text-teal-400 uppercase tracking-wider">The Stack</h3>
-          <div className="space-y-6 flex-1">
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 shrink-0 bg-teal-500/10 rounded flex items-center justify-center text-teal-400 border border-teal-500/20 font-bold">V</div>
-              <div>
-                <h4 className="font-semibold text-lg">Vite</h4>
-                <p className="text-gray-400 text-sm">Next Generation Frontend Tooling</p>
-              </div>
+        <div className="flex flex-col sm:flex-row gap-4">
+          <button className="group flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all">
+            Start Building
+            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+          </button>
+          <button className="flex items-center gap-2 px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-bold border border-white/10 rounded-xl transition-all">
+            <Github size={18} />
+            View Source
+          </button>
+        </div>
+
+        {/* Features Grid Preview */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20 w-full max-w-5xl">
+          {[
+            { icon: <Zap className="text-yellow-400" />, title: "Instant Load", desc: "Optimized for the modern web with zero bloat." },
+            { icon: <Shield className="text-green-400" />, title: "Secure", desc: "Enterprise-grade security baked into every layer." },
+            { icon: <Rocket className="text-purple-400" />, title: "Scale", desc: "From MVP to millions of users without friction." }
+          ].map((feature, i) => (
+            <div key={i} className="p-6 rounded-2xl bg-white/5 border border-white/10 text-left hover:border-white/20 transition-colors">
+              <div className="mb-4">{feature.icon}</div>
+              <h3 className="font-bold mb-2">{feature.title}</h3>
+              <p className="text-sm text-gray-400">{feature.desc}</p>
             </div>
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 shrink-0 bg-cyan-500/10 rounded flex items-center justify-center text-cyan-400 border border-cyan-500/20 font-bold">R</div>
-              <div>
-                <h4 className="font-semibold text-lg">React</h4>
-                <p className="text-gray-400 text-sm">A JavaScript library for building user interfaces</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 shrink-0 bg-blue-400/10 rounded flex items-center justify-center text-blue-300 border border-blue-400/20 font-bold">TS</div>
-              <div>
-                <h4 className="font-semibold text-lg">TypeScript</h4>
-                <p className="text-gray-400 text-sm">Typed JavaScript at Scale</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 shrink-0 bg-teal-500/10 rounded flex items-center justify-center text-teal-400 border border-teal-500/20 font-bold">T</div>
-              <div>
-                <h4 className="font-semibold text-lg">Tailwind CSS</h4>
-                <p className="text-gray-400 text-sm">A utility-first CSS framework</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="mt-8 pt-6 border-t border-gray-800 text-xs text-gray-500 flex justify-between items-center">
-            <span>Ready to develop</span>
-            <span className="flex items-center gap-1">
-              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-              Live Preview Active
-            </span>
-          </div>
-        </section>
+          ))}
+        </div>
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 border border-gray-800 rounded-xl px-6 py-4 shadow-sm flex items-center justify-center text-sm text-gray-500">
-        Template created for rapid prototyping • {new Date().getFullYear()}
+      <footer className="p-6 text-center text-gray-500 text-sm border-t border-white/5">
+        © 2024 Konnekt Forge. All rights reserved.
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
