@@ -12,7 +12,7 @@ function App() {
           <div className="bg-blue-600 p-2 rounded-lg">
             <Rocket className="w-6 h-6 text-white" />
           </div>
-          <h1 className="text-xl font-bold text-gray-900">Vite-React-Tailwind Template</h1>
+          <h1 className="text-xl font-bold text-gray-900">Konnekt: FORGE</h1>
         </div>
         <a 
           href="https://github.com" 
