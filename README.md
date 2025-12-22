@@ -1,6 +1,6 @@
 # Konnekt Vite React TS Template
 
-An exceptional React template with TypeScript, Vite, Tailwind CSS, and Lucide React.
+An exceptional and optimized React template with TypeScript, Vite, Tailwind CSS, and Lucide React.
 
 ## Features
 
