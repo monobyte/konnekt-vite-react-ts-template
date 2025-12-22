@@ -2,14 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  background-color: #0a0a0a;
-  color: #ffffff;
-}
-
-body {
-  margin: 0;
-  padding: 10px;
-  box-sizing: border-box;
-  overflow: hidden;
+@layer base {
+  body {
+    @apply bg-zinc-950 text-zinc-50;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+  }
 }
