@@ -1,16 +1,15 @@
-# Konnekt Vite React TS Template
+# Konnekt Forge: The Ultimate React Engine
 
-**Empower your development workflow with the Konnekt Vite React TS Template.** This is not just a starter kit; it's a high-performance foundation designed for developers who demand speed, reliability, and modern aesthetics.
+**Ignite your productivity with Konnekt Forge.** A precision-engineered Vite + React + TypeScript foundation built for developers who build the future. 
 
-### Why Choose Konnekt?
+### Why Konnekt Forge?
 
-- **🚀 Blazing Fast:** Powered by Vite for near-instant HMR and lightning-quick builds.
-- **🛡️ Type-Safe:** Fully integrated with TypeScript to catch errors early and improve developer productivity.
-- **🎨 Effortless Styling:** Utility-first design with Tailwind CSS, pre-configured for production.
-- **✨ Iconography:** Access hundreds of pixel-perfect icons via Lucide React.
-- **📦 Clean Architecture:** A lightweight, opinionated structure that scales with your project.
+- **⚡ Instant Acceleration:** Zero-wait startup and lightning-fast HMR with Vite.
+- **💎 Robust Integrity:** Deep TypeScript integration for rock-solid, self-documenting code.
+- **🖌️ Design Freedom:** Seamlessly style with Tailwind CSS and the elegant Lucide React icon set.
+- **🏗️ Scalable Core:** A lean, professional architecture that grows with your vision.
 
-Stop wasting time on boilerplate and start building your next big idea today!
+Don't just start projects—forge them. Experience the peak of modern web development.
 
 ## Features
 
